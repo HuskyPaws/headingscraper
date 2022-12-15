@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-st.title('Web Scraper')
+st.title('Heading Scraper by Arpad')
 
 # Define a function to scrape the page
 def scrape_page(url):
@@ -57,9 +57,13 @@ if not url.startswith('http://') and not url.startswith('https://'):
   url = 'https://' + url
 
 # Create checkboxes for the different heading types
-h1 = st.checkbox('H1')
-h2 = st.checkbox('H2')
-h3 = st.checkbox('H3')
+left, right = st.beta_columns(2)
+with left: 
+   st.subheader('Select Which Headings You Want to Scrape')
+with right:
+    h1 = st.checkbox('H1')
+    h2 = st.checkbox('H2')
+    h3 = st.checkbox('H3')
 
 # Add a "Scrape" button
 if st.button('Scrape'):
