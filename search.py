@@ -49,7 +49,7 @@ def scrape_page(url):
     return df
 
 # Get the URL from the user, with a default value of "http://"
-url = st.text_input('Enter the URL of the page you want to scrape:', 'http://')
+url = st.text_input('Enter the URL of the page you want to scrape:',)
 
 # Check if the URL starts with "http://" or "https://"
 if not url.startswith('http://') and not url.startswith('https://'):
