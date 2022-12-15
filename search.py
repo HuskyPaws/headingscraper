@@ -57,9 +57,9 @@ if not url.startswith('http://') and not url.startswith('https://'):
   url = 'https://' + url
 
 # Create checkboxes for the different heading types
-left, right = st.beta_columns(2)
+left, right = st.columns(2)
 with left: 
-   st.subheader('Select Which Headings You Want to Scrape')
+   st.markdown('Select Which Headings You Want to Scrape')
 with right:
     h1 = st.checkbox('H1')
     h2 = st.checkbox('H2')
