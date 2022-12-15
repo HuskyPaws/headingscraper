@@ -68,9 +68,9 @@ with right:
 # Add a "Scrape" button
 if st.button('Scrape'):
   # Check if the URL is equal to the default value
-  if url == 'http://':
+  if not url:
     # If it is, show an error message
-    st.error('Please enter a valid URL')
+    st.error('Please enter a URL')
   else:
     # If it's not, call the scrape_page function
     scrape_page(url)
